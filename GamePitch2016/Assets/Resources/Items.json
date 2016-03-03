@@ -1,0 +1,42 @@
+{
+	"Weapons": 
+	[
+		{
+			"id": 0,
+			"title": "Sword of Wood",
+			"description": "Made from wood of drift",
+			"power": 5,
+			"type": "sword",
+			"slug": "swordOfWood"
+		}
+	],
+	"Collectables":
+	[
+		{
+			"CollecatableGroup":
+			[
+			{
+				"id": 0,
+				"groupNum": 0,
+				"title": "Toy Car",
+				"description": "Faster then fast.",
+				"slug": "toyCar"
+			},
+			{
+				"id": 1,
+				"groupNum": 1,
+				"title": "Wheel",
+				"description": "Perfect circle",
+				"slug": "wheel"
+			},
+			{
+				"id": 2,
+				"groupNum": 2,
+				"title": "Car Body",
+				"description": "The paint is scratched.",
+				"slug": "carBody"
+			}			
+			]			
+		}
+	]
+}

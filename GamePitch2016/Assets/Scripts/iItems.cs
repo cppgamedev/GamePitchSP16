@@ -1,6 +1,7 @@
-﻿public interface iItems{
+﻿public interface IItems{
 
-    string name { get; set; }
-    string description { get; set; }
+    int id { get; set; }
+    string itemName { get; set; }
+    string description { get; set; } 
 
 }
