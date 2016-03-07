@@ -6,37 +6,132 @@
 			"title": "Sword of Wood",
 			"description": "Made from wood of drift",
 			"power": 5,
-			"type": "sword",
+			"type": "Sword",
+			"maxStack": 1,
 			"slug": "swordOfWood"
+		},
+		{
+			"id": 1,
+			"title": "Sword of Steal",
+			"description": "Are they a pinata?",
+			"power": 5,
+			"type": "Sword",
+			"maxStack": 1,
+			"slug": "swordOfSteal"
+		},
+		{
+			"id": 2,
+			"title": "Axe of Power",
+			"description": "And My Axe!",
+			"power": 5,
+			"type": "Axe",
+			"maxStack": 1,
+			"slug": "axeOfPower"
+		},
+		{
+			"id": 3,
+			"title": "War Hammer",
+			"description": "Use only with nails",
+			"power": 5,
+			"type": "Hammer",
+			"maxStack": 1,
+			"slug": "warHammer"
+		},
+		{
+			"id": 4,
+			"title": "Dagger of stabbing",
+			"description": "Sharpened spork",
+			"power": 5,
+			"type": "Dagger",
+			"maxStack": 1,
+			"slug": "daggerOfStabbing"
+		},
+		{
+			"id": 5,
+			"title": "Bow of Shooting",
+			"description": "Pew Pew",
+			"power": 5,
+			"type": "Bow",
+			"maxStack": 1,
+			"slug": "bowOFShooting"
 		}
 	],
-	"Collectables":
+	"Consumables":
 	[
-		{
-			"CollecatableGroup":
-			[
-			{
-				"id": 0,
-				"groupNum": 0,
-				"title": "Toy Car",
-				"description": "Faster then fast.",
-				"slug": "toyCar"
-			},
-			{
-				"id": 1,
-				"groupNum": 1,
-				"title": "Wheel",
-				"description": "Perfect circle",
-				"slug": "wheel"
-			},
-			{
-				"id": 2,
-				"groupNum": 2,
-				"title": "Car Body",
-				"description": "The paint is scratched.",
-				"slug": "carBody"
-			}			
-			]			
-		}
+	{
+		"id":6,
+		"title":"Lesser Health Postion",
+		"description": "Taste Sweet",
+		"power":10,
+		"type":"Health",
+		"maxStack":10,
+		"slug": "lessHealthPot"
+	},
+	{
+		"id":7,
+		"title":"Health Postion",
+		"description": "Cannot only have one.",
+		"power":25,
+		"type":"Health",
+		"maxStack":10,
+		"slug": "HealthPot"
+	},
+	{
+		"id":8,
+		"title":"Large Health Postion",
+		"description": "This is very big.",
+		"power":50,
+		"type":"Health",
+		"maxStack":10,
+		"slug": "LargeHealthPot"
+	},
+	{
+		"id":9,
+		"title":"Lesser Mana Postion",
+		"description": "I Have the Power.",
+		"power":10,
+		"type":"Mana",
+		"maxStack":10,
+		"slug": "lessManaPot"
+	},
+	{
+		"id":10,
+		"title":"Mana Postion",
+		"description": "Why is it Blue.",
+		"power":25,
+		"type":"Mana",
+		"maxStack":10,
+		"slug": "manaPot"
+	},
+	{
+		"id":11,
+		"title":"Large Mana Postion",
+		"description": "Another Sip.",
+		"power":50,
+		"type":"Mana",
+		"maxStack":10,
+		"slug": "largeManahPot"
+	}
+	],
+	"StackingWeapons":
+	[
+	{
+		"id":12,
+		"title":"Arrows",
+		"description": "It seems to be made of wood.",
+		"power":10,
+		"type":"Arrow",
+		"maxStack":10,
+		"slug": "arrows"
+	},
+	{
+		"id":13,
+		"title":"Bombs",
+		"description": "FireWorks and Sparkles.",
+		"power":10,
+		"type":"Bomb",
+		"maxStack":10,
+		"slug": "bombs"
+	}
 	]
 }

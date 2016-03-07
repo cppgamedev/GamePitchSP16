@@ -10,7 +10,7 @@ public class ItemPickup : MonoBehaviour {
     {
         if(other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<Inventory>().addWeapon(itemID);
+            other.gameObject.GetComponent<Inventory>().addItem(itemID);
             Destroy(this);
         }
     }
