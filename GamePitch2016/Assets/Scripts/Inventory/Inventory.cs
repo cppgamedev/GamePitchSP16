@@ -6,7 +6,7 @@ using System.Linq;
 public class Inventory : MonoBehaviour
 {
     ItemDatabase itemdatabase;
-    List<Item> inventory = new List<Item>();
+    List<ItemData> inventory = new List<ItemData>();
     public GameObject item;
     public GameObject itemList;
 
@@ -16,50 +16,49 @@ public class Inventory : MonoBehaviour
         itemdatabase = GetComponent<ItemDatabase>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public bool addItem(int id)
     {
-
-    }
-
-    public void addItem(int id)
-    {
-        Item item = inInventory(id);// cheks to see if item in inventory has ID.
-        bool addToInventory = true;
+        ItemData item = inInventory(id);// cheks to see if item in inventory has ID.
         if ( item != null) // checks if inInventory cameback with a item.
         {
-            if (!item.isStackable())
+            if (!item.item.isStackable())
             {
-                Debug.Log(item.itemName + " already in Inventory.");
+                Debug.Log(item.item.itemName + " already in Inventory.");
             }
             else
             {
-                //TODO for use with GameObject item that contains itemData
+                if (item.addItem())
+                {
+                    //Debug.Log("add to stack: " + item.amount);
+                    return true;
+                }
             }
-            addToInventory = false;
         }
-        if(addToInventory)//adds new item into inventory.
+            else//adds new item into inventory.
         {
             Item itemToAdd = itemdatabase.searchItem(id);
             if(itemToAdd != null)// checks to makesure there exist a item with ID
             {
-                inventory.Add(itemToAdd);
+                inventory.Add(new ItemData(itemToAdd));
                 inventory.Sort();
+                //Debug.Log(itemToAdd.itemName + " add to inventory");
+                return true;
             }
             else
             {
                 Debug.Log(id + " Does not exist in Database");
             }            
         }
+        return false;
     }
 
-    Item inInventory(int id)
+    ItemData inInventory(int id)
     {
         if(inventory.Count > 0)
         {
-            foreach( Item item in inventory)
+            foreach( ItemData item in inventory)
             {
-                if(item.id == id) { return item; }
+                if(item.item.id == id) { return item; }
             }
         }
         return null;
