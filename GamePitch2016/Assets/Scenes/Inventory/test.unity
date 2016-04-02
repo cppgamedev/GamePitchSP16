@@ -164,6 +164,14 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11441084, guid: 23d43a99d30d9ba48ab1a82580f262c0, type: 2}
+      propertyPath: TextItemName
+      value: 
+      objectReference: {fileID: 1331156933}
+    - target: {fileID: 11441084, guid: 23d43a99d30d9ba48ab1a82580f262c0, type: 2}
+      propertyPath: TextAmount
+      value: 
+      objectReference: {fileID: 279968309}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 23d43a99d30d9ba48ab1a82580f262c0, type: 2}
   m_IsPrefabParent: 0
@@ -234,6 +242,10 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 183075669}
+--- !u!1 &279968309 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 147674, guid: 23d43a99d30d9ba48ab1a82580f262c0, type: 2}
+  m_PrefabInternal: {fileID: 13284625}
 --- !u!4 &475988098 stripped
 Transform:
   m_PrefabParentObject: {fileID: 499930, guid: ebd3876be1b0f1448823d2e59038495a, type: 2}
@@ -272,7 +284,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 148, y: -202}
+  m_AnchoredPosition: {x: 148, y: -201.5}
   m_SizeDelta: {x: 296, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &659485473
@@ -695,6 +707,10 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1299668558}
+--- !u!1 &1331156933 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 123242, guid: 23d43a99d30d9ba48ab1a82580f262c0, type: 2}
+  m_PrefabInternal: {fileID: 13284625}
 --- !u!1 &1449776375
 GameObject:
   m_ObjectHideFlags: 0

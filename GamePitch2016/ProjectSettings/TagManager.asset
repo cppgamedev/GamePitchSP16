@@ -15,9 +15,9 @@ TagManager:
   - UI
   - 
   - 
-  - Inventory
-  - PickUp
-  - 
+  - Player
+  - OneWay
+  - Item
   - 
   - 
   - 

@@ -13,10 +13,11 @@ public class ItemDatabase : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        jsonString = File.ReadAllText(Application.dataPath + "/Resources/Items.json");
+        jsonString = File.ReadAllText(Application.dataPath + "/Resources/Item Lib/Items.json");
         itemData = JsonMapper.ToObject(jsonString);
 
         //seperated into these catagories for organization purposes.
+        //fills database with list of items.
         loadItemDatabase("Weapons");
         loadItemDatabase("Consumables");
         loadItemDatabase("StackingWeapons");
@@ -25,6 +26,7 @@ public class ItemDatabase : MonoBehaviour
     //creates new Items by getting the info out of json object.
     private void loadItemDatabase(string type)
     {
+        //creates new Items and fills in info from json.
         for (int i = 0; i < itemData[type].Count; i++)
         {
             itemDatabase.Add(new Item((int)itemData[type][i]["id"], itemData[type][i]["title"].ToString(),

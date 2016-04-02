@@ -57,7 +57,7 @@ public class Item : IItems, IComparable
         }
         else
         {
-            throw new ArgumentException("Object not a Item");
+            throw new ArgumentException("Object not a Item: ");
         }
     }
 }
