@@ -1,0 +1,83 @@
+{
+	"Collectables":
+	[
+    {
+      "groupId": 0,
+      "id": 0,
+      "title": "Toy Car",
+      "description": "Faster then fast.",
+      "slug": "toyCar",
+      "parts": [
+        {
+          "id": 1,
+          "title": "Wheel",
+          "description": "Perfect circle",
+          "slug": "wheel0"
+        },
+        {
+          "id": 2,
+          "title": "Wheel",
+          "description": "Perfect circle",
+          "slug": "wheel1"
+        },
+        {
+          "id": 3,
+          "title": "Wheel",
+          "description": "Perfect circle",
+          "slug": "wheel2"
+        },
+        {
+          "id": 4,
+          "title": "Wheel",
+          "description": "Perfect circle",
+          "slug": "wheel3"
+        },
+        {
+          "id": 5,
+          "title": "Car Body",
+          "description": "The paint is scratched.",
+          "slug": "carBody"
+        }
+      ]
+    },
+    {
+      "groupId": 1,
+      "id": 6,
+      "title": "Action Figure",
+      "description": "My hero.",
+      "slug": "actionFigure",
+      "parts": [
+        {
+          "id": 7,
+          "title": "Left Leg",
+          "description": "Arm wrestle champion",
+          "slug": "leftLeg"
+        },
+        {
+          "id": 8,
+          "title": "Right Leg",
+          "description": "Perfect circle",
+          "slug": "rightLeg"
+        },
+        {
+          "id": 9,
+          "title": "Left Arm",
+          "description": "Perfect circle",
+          "slug": "leftArm"
+        },
+        {
+          "id": 10,
+          "title": "Right Arm",
+          "description": "Perfect circle",
+          "slug": "rightArm"
+        },
+        {
+          "id": 11,
+          "title": "Torso",
+          "description": "The paint is scratched.",
+          "slug": "torso"
+        }
+      ]
+    }
+	]
+}
