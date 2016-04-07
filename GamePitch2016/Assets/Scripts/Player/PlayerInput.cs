@@ -28,6 +28,8 @@ public class PlayerInput : MonoBehaviour
 	private float dashCooldown = 0;
 	private float dashDistanceThisFrame = 1f;
 
+    private Inventory inventory;
+
 	void Awake()
 	{
 		_animator = GetComponent<Animator>();
@@ -37,6 +39,8 @@ public class PlayerInput : MonoBehaviour
 		_controller.onControllerCollidedEvent += onControllerCollider;
 		_controller.onTriggerEnterEvent += onTriggerEnterEvent;
 		_controller.onTriggerExitEvent += onTriggerExitEvent;
+
+        inventory = this.gameObject.transform.Find("Inventory").GetComponent<Inventory>();
 	}
 
 
@@ -54,7 +58,19 @@ public class PlayerInput : MonoBehaviour
 
 	void onTriggerEnterEvent( Collider2D col )
 	{
-		Debug.Log( "onTriggerEnterEvent: " + col.gameObject.name );
+        if(col.gameObject.tag == "Item")
+        {
+            //Gets the item id from the item world object returns true if add to inventory
+            if(inventory.addItem(col.gameObject.GetComponent<ItemPickup>().getItemID()))
+            {
+                //destroys object if successfuly add to inventory.
+                col.gameObject.GetComponent<ItemPickup>().destroyItem();
+            }
+        }
+        else
+        {
+            Debug.Log( "onTriggerEnterEvent: " + col.gameObject.name );
+        }
 	}
 
 
