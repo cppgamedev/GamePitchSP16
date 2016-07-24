@@ -29,8 +29,9 @@ public class PlayerInput : MonoBehaviour
 	private float dashDistanceThisFrame = 1f;
 
     private Inventory inventory;
+    private PlayerStats playerStats;
 
-	void Awake()
+    void Awake()
 	{
 		_animator = GetComponent<Animator>();
 		_controller = GetComponent<CharacterController2D>();
@@ -41,6 +42,7 @@ public class PlayerInput : MonoBehaviour
 		_controller.onTriggerExitEvent += onTriggerExitEvent;
 
         inventory = this.gameObject.transform.Find("Inventory").GetComponent<Inventory>();
+        playerStats = this.gameObject.GetComponent<PlayerStats>();
 	}
 
 
@@ -58,6 +60,7 @@ public class PlayerInput : MonoBehaviour
 
 	void onTriggerEnterEvent( Collider2D col )
 	{
+        
         if(col.gameObject.tag == "Item")
         {
             //Gets the item id from the item world object returns true if add to inventory
@@ -66,6 +69,11 @@ public class PlayerInput : MonoBehaviour
                 //destroys object if successfuly add to inventory.
                 col.gameObject.GetComponent<ItemPickup>().destroyItem();
             }
+        }
+        else if (col.gameObject.tag == "Enemy")
+        {
+            playerStats.removeHealth(col.gameObject.GetComponent<Damage>().getDamage());
+            Debug.Log("Player Health: " + playerStats.getHelath());
         }
         else
         {
