@@ -114,7 +114,7 @@ public class PlayerInput : MonoBehaviour
         } 
 		else if (_controller.isWalled) //Reset for double jump
 		{
-			jumpCount = 0;
+			jumpCount = 1;
 		}
 
         if (Input.GetButton("Horizontal"))
