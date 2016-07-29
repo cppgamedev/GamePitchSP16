@@ -22,8 +22,13 @@ public class PlayerStats : MonoBehaviour {
         health -= amount;
         if(health <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+			die();
         }
+	}
+	
+	public void die() {
+		// add timer so level doesn't reset right away?
+		 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 
     public void addHealth (float amount)
