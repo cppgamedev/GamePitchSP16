@@ -23,6 +23,8 @@ public class PlayerInput : MonoBehaviour
 	private Animator _animator;
 	private RaycastHit2D _lastControllerColliderHit;
 	private Vector3 _velocity;
+    private Vector3 knockback;
+    private float knockbackdur;
 
 	private int jumpCount = 0;
 	private float dashCooldown = 0;
@@ -75,18 +77,12 @@ public class PlayerInput : MonoBehaviour
         {
             Damage enemy = col.gameObject.GetComponent<Damage>();
             playerStats.removeHealth(enemy.getDamage());
-            if(col.gameObject.transform.position.x - 
-                this.gameObject.transform.position.x > 0)
-            {
-                _controller.move(new Vector3(-enemy.getKnockBackX(),
-                    enemy.getKnockBackY(), 0));
-            }
-            else
-            {
-                _controller.move(new Vector3(enemy.getKnockBackX(),
-                    enemy.getKnockBackY(), 0));
-            }
+            int dirc = col.gameObject.transform.position.x -
+                this.gameObject.transform.position.x > 0 ? -1 : 1;
             
+            knockback = new Vector3( dirc * enemy.getKnockBackX(), enemy.getKnockBackY(), 0);
+            knockbackdur = enemy.getPower();
+            enemy.getDestructable();
         }
         else
         {
@@ -117,85 +113,94 @@ public class PlayerInput : MonoBehaviour
 			jumpCount = 1;
 		}
 
-        if (Input.GetButton("Horizontal"))
-		{
-            HorzSpeed = Input.GetAxis("Horizontal");
-            if (transform.localScale.x < 0f && HorzSpeed > 0f ||
-                transform.localScale.x > 0f && HorzSpeed < 0f)
-                transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-
-			if (_controller.isGrounded)
-            {
-                if (!isCroched)
-                    _animator.Play(Animator.StringToHash("Run"));
-                else
-                    _animator.Play(Animator.StringToHash("Crawl"));
-            }
-		}
-
-        else 
-		{
-            HorzSpeed = 0;
-			if (_controller.isGrounded)
-            {
-                if(!isCroched)
-					_animator.Play (Animator.StringToHash ("Idle"));
-                else
-                    _animator.Play(Animator.StringToHash("Idle Crawl"));
-            }
-                
-		}
-
-		if (Input.GetButtonDown("Sprint"))
+        if (knockbackdur > 0)
         {
-			if (dashCooldown <= 0 && dashDistanceThisFrame <= 1) 
-			{
-				dashDistanceThisFrame = dashDistance;
-				dashCooldown = 5f;
-			}
-		}
-
-		if (dashCooldown > 0)
-			dashCooldown -= 1 * Time.deltaTime;
-
-		// we can only jump whilst grounded OR belew set double Jump limit
-		if ((jumpCount < jumpsAllowed) && Input.GetButtonDown("Jump") &&
-            !Input.GetButton("Crouch")) 
-        {
-            ++jumpCount;
-			_velocity.y = Mathf.Sqrt (2f * jumpHeight * -gravity);
-            _animator.SetBool("Falling", true);
-			_animator.Play (Animator.StringToHash ("Jump"));
-           
-		}
-			
-		// apply horizontal speed smoothing it. dont really do this with Lerp. Use SmoothDamp or something that provides more control
-		var smoothedMovementFactor = _controller.isGrounded ? groundDamping : inAirDamping; // how fast do we change direction?
-
-		_velocity.x = Mathf.Lerp( _velocity.x * dashDistanceThisFrame, HorzSpeed * runSpeed, Time.deltaTime * smoothedMovementFactor );
-
-		if (dashDistanceThisFrame > 1)
-			dashDistanceThisFrame--;
-
-		// apply gravity before moving
-		_velocity.y += gravity * Time.deltaTime;
-
-		// if holding down bump up our movement amount and turn off one way platform detection for a frame.
-		// this lets uf jump down through one way platforms
-		if( _controller.isGrounded && Input.GetButton("Crouch"))
-        {
-            if (!isCroched)
-            {
-                isCroched = true;
-                _animator.Play (Animator.StringToHash("Duck"));
-            }
-			_velocity.y *= 3f;
-			_controller.ignoreOneWayPlatformsThisFrame = true;
-		}
+            knockbackdur -= 1 * Time.deltaTime;
+            Debug.Log("KnockBack Time: " + knockbackdur);
+            _velocity = knockback;
+        }
         else
         {
-            isCroched = false;
+            if (Input.GetButton("Horizontal"))
+            {
+                HorzSpeed = Input.GetAxis("Horizontal");
+                if (transform.localScale.x < 0f && HorzSpeed > 0f ||
+                    transform.localScale.x > 0f && HorzSpeed < 0f)
+                    transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+
+                if (_controller.isGrounded)
+                {
+                    if (!isCroched)
+                        _animator.Play(Animator.StringToHash("Run"));
+                    else
+                        _animator.Play(Animator.StringToHash("Crawl"));
+                }
+            }
+            else
+            {
+                HorzSpeed = 0;
+                if (_controller.isGrounded)
+                {
+                    if (!isCroched)
+                        _animator.Play(Animator.StringToHash("Idle"));
+                    else
+                        _animator.Play(Animator.StringToHash("Idle Crawl"));
+                }
+
+            }
+
+            if (Input.GetButtonDown("Sprint"))
+            {
+                if (dashCooldown <= 0 && dashDistanceThisFrame <= 1)
+                {
+                    dashDistanceThisFrame = dashDistance;
+                    dashCooldown = 5f;
+                }
+            }
+
+            if (dashCooldown > 0)
+                dashCooldown -= 1 * Time.deltaTime;
+
+            // we can only jump whilst grounded OR belew set double Jump limit
+            if ((jumpCount < jumpsAllowed) && Input.GetButtonDown("Jump") &&
+                !Input.GetButton("Crouch"))
+            {
+                ++jumpCount;
+                _velocity.y = Mathf.Sqrt(2f * jumpHeight * -gravity);
+                _animator.SetBool("Falling", true);
+                _animator.Play(Animator.StringToHash("Jump"));
+
+            }
+
+            // apply horizontal speed smoothing it. dont really do this with Lerp. Use SmoothDamp or something that provides more control
+            var smoothedMovementFactor = _controller.isGrounded ? groundDamping : inAirDamping; // how fast do we change direction?
+
+            _velocity.x = Mathf.Lerp(_velocity.x * dashDistanceThisFrame, HorzSpeed * runSpeed, Time.deltaTime * smoothedMovementFactor);
+
+            if (dashDistanceThisFrame > 1)
+                dashDistanceThisFrame--;
+
+           
+
+            // if holding down bump up our movement amount and turn off one way platform detection for a frame.
+            // this lets uf jump down through one way platforms
+            if (_controller.isGrounded && Input.GetButton("Crouch"))
+            {
+                if (!isCroched)
+                {
+                    isCroched = true;
+                    _animator.Play(Animator.StringToHash("Duck"));
+                }
+                _velocity.y *= 3f;
+                _controller.ignoreOneWayPlatformsThisFrame = true;
+            }
+            else
+            {
+                isCroched = false;
+            }
         }
+         // apply gravity before moving
+            _velocity.y += gravity * Time.deltaTime;
 
 		_controller.move( _velocity * Time.deltaTime );
 
