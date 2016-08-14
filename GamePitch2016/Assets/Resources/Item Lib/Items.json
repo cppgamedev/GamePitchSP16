@@ -12,15 +12,6 @@
 		},
 		{
 			"id": 1,
-			"title": "Sword of Steal",
-			"description": "Are they a pinata?",
-			"power": 5,
-			"type": "Sword",
-			"maxStack": 1,
-			"slug": "swordOfSteal"
-		},
-		{
-			"id": 2,
 			"title": "Axe of Power",
 			"description": "And My Axe!",
 			"power": 5,
@@ -29,7 +20,7 @@
 			"slug": "axeOfPower"
 		},
 		{
-			"id": 3,
+			"id": 2,
 			"title": "War Hammer",
 			"description": "Use only with nails",
 			"power": 5,
@@ -38,7 +29,7 @@
 			"slug": "warHammer"
 		},
 		{
-			"id": 4,
+			"id": 3,
 			"title": "Dagger of stabbing",
 			"description": "Sharpened spork",
 			"power": 5,
@@ -47,7 +38,7 @@
 			"slug": "daggerOfStabbing"
 		},
 		{
-			"id": 5,
+			"id": 4,
 			"title": "Bow of Shooting",
 			"description": "Pew Pew",
 			"power": 5,
