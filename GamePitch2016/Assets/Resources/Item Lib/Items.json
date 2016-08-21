@@ -30,7 +30,7 @@
 		},
 		{
 			"id": 3,
-			"title": "Dagger of stabbing",
+			"title": "Dagger of Stabbing",
 			"description": "Sharpened spork",
 			"power": 5,
 			"type": "Dagger",
@@ -51,7 +51,7 @@
 	[
 	{
 		"id":6,
-		"title":"Lesser Health Postion",
+		"title":"Lesser Health Potion",
 		"description": "Taste Sweet",
 		"power":10,
 		"type":"Health",
@@ -60,7 +60,7 @@
 	},
 	{
 		"id":7,
-		"title":"Health Postion",
+		"title":"Health Potion",
 		"description": "Cannot only have one.",
 		"power":25,
 		"type":"Health",
@@ -69,7 +69,7 @@
 	},
 	{
 		"id":8,
-		"title":"Large Health Postion",
+		"title":"Large Health Potion",
 		"description": "This is very big.",
 		"power":50,
 		"type":"Health",
@@ -78,7 +78,7 @@
 	},
 	{
 		"id":9,
-		"title":"Lesser Mana Postion",
+		"title":"Lesser Mana Potion",
 		"description": "I Have the Power.",
 		"power":10,
 		"type":"Mana",
@@ -87,7 +87,7 @@
 	},
 	{
 		"id":10,
-		"title":"Mana Postion",
+		"title":"Mana Potion",
 		"description": "Why is it Blue.",
 		"power":25,
 		"type":"Mana",
@@ -96,7 +96,7 @@
 	},
 	{
 		"id":11,
-		"title":"Large Mana Postion",
+		"title":"Large Mana Potion",
 		"description": "Another Sip.",
 		"power":50,
 		"type":"Mana",
