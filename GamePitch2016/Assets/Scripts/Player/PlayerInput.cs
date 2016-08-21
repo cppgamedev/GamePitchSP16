@@ -17,20 +17,24 @@ public class PlayerInput : MonoBehaviour
 	public float dashDistance = 3f;
 
 	[HideInInspector]
-	private float normalizedHorizontalSpeed = 0;
+	private float HorzSpeed = 0;
 
 	private CharacterController2D _controller;
 	private Animator _animator;
 	private RaycastHit2D _lastControllerColliderHit;
 	private Vector3 _velocity;
+    private Vector3 knockback;
+    private float knockbackdur;
 
 	private int jumpCount = 0;
 	private float dashCooldown = 0;
 	private float dashDistanceThisFrame = 1f;
+    private bool isCroched = false;
 
     private Inventory inventory;
+    private PlayerStats playerStats;
 
-	void Awake()
+    void Awake()
 	{
 		_animator = GetComponent<Animator>();
 		_controller = GetComponent<CharacterController2D>();
@@ -41,6 +45,7 @@ public class PlayerInput : MonoBehaviour
 		_controller.onTriggerExitEvent += onTriggerExitEvent;
 
         inventory = this.gameObject.transform.Find("Inventory").GetComponent<Inventory>();
+        playerStats = this.gameObject.GetComponent<PlayerStats>();
 	}
 
 
@@ -58,6 +63,7 @@ public class PlayerInput : MonoBehaviour
 
 	void onTriggerEnterEvent( Collider2D col )
 	{
+        
         if(col.gameObject.tag == "Item")
         {
             //Gets the item id from the item world object returns true if add to inventory
@@ -66,6 +72,17 @@ public class PlayerInput : MonoBehaviour
                 //destroys object if successfuly add to inventory.
                 col.gameObject.GetComponent<ItemPickup>().destroyItem();
             }
+        }
+        else if (col.gameObject.tag == "Enemy")
+        {
+            Damage enemy = col.gameObject.GetComponent<Damage>();
+            playerStats.removeHealth(enemy.getDamage());
+            int dirc = col.gameObject.transform.position.x -
+                this.gameObject.transform.position.x > 0 ? -1 : 1;
+            
+            knockback = new Vector3( dirc * enemy.getKnockBackX(), enemy.getKnockBackY(), 0);
+            knockbackdur = enemy.getPower();
+            enemy.getDestructable();
         }
         else
         {
@@ -76,7 +93,6 @@ public class PlayerInput : MonoBehaviour
 
 	void onTriggerExitEvent( Collider2D col )
 	{
-		Debug.Log( "onTriggerExitEvent: " + col.gameObject.name );
 	}
 
 	#endregion
@@ -90,74 +106,101 @@ public class PlayerInput : MonoBehaviour
 			_velocity.y = 0;
 			jumpCount = 0;
 			dashCooldown = 0;
-		} 
+            _animator.SetBool("Falling", false);
+        } 
 		else if (_controller.isWalled) //Reset for double jump
 		{
-			jumpCount = 0;
-		}
-						
-		if (Input.GetKey (KeyCode.RightArrow) || Input.GetKey (KeyCode.D))
-		{
-			normalizedHorizontalSpeed = 1;
-			
-			if (transform.localScale.x < 0f)
-				transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z); //Flip animation around
-
-			if (_controller.isGrounded)
-				_animator.Play (Animator.StringToHash ("Run"));
-		} else if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKey (KeyCode.A))
-		{
-			normalizedHorizontalSpeed = -1;
-			if (transform.localScale.x > 0f)
-				transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-
-			if (_controller.isGrounded)
-				_animator.Play (Animator.StringToHash ("Run"));
-		} else 
-		{
-			normalizedHorizontalSpeed = 0;
-			if (_controller.isGrounded)
-					_animator.Play (Animator.StringToHash ("Idle"));
+			jumpCount = 1;
 		}
 
-		if (Input.GetKeyDown (KeyCode.LeftShift))
-		{
-			if (dashCooldown <= 0 && dashDistanceThisFrame <= 1) 
-			{
-				dashDistanceThisFrame = dashDistance;
-				dashCooldown = 5f;
-			}
-		}
+        if (knockbackdur > 0)
+        {
+            knockbackdur -= 1 * Time.deltaTime;
+            Debug.Log("KnockBack Time: " + knockbackdur);
+            _velocity = knockback;
+        }
+        else
+        {
+            if (Input.GetButton("Horizontal"))
+            {
+                HorzSpeed = Input.GetAxis("Horizontal");
+                if (transform.localScale.x < 0f && HorzSpeed > 0f ||
+                    transform.localScale.x > 0f && HorzSpeed < 0f)
+                    transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 
-		if (dashCooldown > 0)
-			dashCooldown -= 1 * Time.deltaTime;
+                if (_controller.isGrounded)
+                {
+                    if (!isCroched)
+                        _animator.Play(Animator.StringToHash("Run"));
+                    else
+                        _animator.Play(Animator.StringToHash("Crawl"));
+                }
+            }
+            else
+            {
+                HorzSpeed = 0;
+                if (_controller.isGrounded)
+                {
+                    if (!isCroched)
+                        _animator.Play(Animator.StringToHash("Idle"));
+                    else
+                        _animator.Play(Animator.StringToHash("Idle Crawl"));
+                }
 
-			// we can only jump whilst grounded OR belew set double Jump limit
-			if ((jumpCount < jumpsAllowed) && (Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.W))) {
-				++jumpCount;
-				_velocity.y = Mathf.Sqrt (2f * jumpHeight * -gravity);
-				_animator.Play (Animator.StringToHash ("Jump"));
-			}
-			
-		// apply horizontal speed smoothing it. dont really do this with Lerp. Use SmoothDamp or something that provides more control
-		var smoothedMovementFactor = _controller.isGrounded ? groundDamping : inAirDamping; // how fast do we change direction?
+            }
 
-		_velocity.x = Mathf.Lerp( _velocity.x * dashDistanceThisFrame, normalizedHorizontalSpeed * runSpeed, Time.deltaTime * smoothedMovementFactor );
+            if (Input.GetButtonDown("Sprint"))
+            {
+                if (dashCooldown <= 0 && dashDistanceThisFrame <= 1)
+                {
+                    dashDistanceThisFrame = dashDistance;
+                    dashCooldown = 5f;
+                }
+            }
 
-		if (dashDistanceThisFrame > 1)
-			dashDistanceThisFrame--;
+            if (dashCooldown > 0)
+                dashCooldown -= 1 * Time.deltaTime;
 
-		// apply gravity before moving
-		_velocity.y += gravity * Time.deltaTime;
+            // we can only jump whilst grounded OR belew set double Jump limit
+            if ((jumpCount < jumpsAllowed) && Input.GetButtonDown("Jump") &&
+                !Input.GetButton("Crouch"))
+            {
+                ++jumpCount;
+                _velocity.y = Mathf.Sqrt(2f * jumpHeight * -gravity);
+                _animator.SetBool("Falling", true);
+                _animator.Play(Animator.StringToHash("Jump"));
 
-		// if holding down bump up our movement amount and turn off one way platform detection for a frame.
-		// this lets uf jump down through one way platforms
-		if( _controller.isGrounded && (Input.GetKey( KeyCode.DownArrow ) || Input.GetKey( KeyCode.S ) ) )
-		{
-			_velocity.y *= 3f;
-			_controller.ignoreOneWayPlatformsThisFrame = true;
-			//_animator.Play (Animator.StringToHash("Duck") );
-		}
+            }
+
+            // apply horizontal speed smoothing it. dont really do this with Lerp. Use SmoothDamp or something that provides more control
+            var smoothedMovementFactor = _controller.isGrounded ? groundDamping : inAirDamping; // how fast do we change direction?
+
+            _velocity.x = Mathf.Lerp(_velocity.x * dashDistanceThisFrame, HorzSpeed * runSpeed, Time.deltaTime * smoothedMovementFactor);
+
+            if (dashDistanceThisFrame > 1)
+                dashDistanceThisFrame--;
+
+           
+
+            // if holding down bump up our movement amount and turn off one way platform detection for a frame.
+            // this lets uf jump down through one way platforms
+            if (_controller.isGrounded && Input.GetButton("Crouch"))
+            {
+                if (!isCroched)
+                {
+                    isCroched = true;
+                    _animator.Play(Animator.StringToHash("Duck"));
+                }
+                _velocity.y *= 3f;
+                _controller.ignoreOneWayPlatformsThisFrame = true;
+            }
+            else
+            {
+                isCroched = false;
+            }
+        }
+         // apply gravity before moving
+            _velocity.y += gravity * Time.deltaTime;
 
 		_controller.move( _velocity * Time.deltaTime );
 
