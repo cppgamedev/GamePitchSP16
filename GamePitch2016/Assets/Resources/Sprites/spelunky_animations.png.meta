@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 987a3f200e1fa684abb19edde2db1068
+guid: 0370ca45554824e75921d7740a78749e
 TextureImporter:
   fileIDToRecycleName:
     21300000: idle
@@ -88,7 +88,7 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: 0.25
+    heightScale: .25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
@@ -108,12 +108,11 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
@@ -129,19 +128,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -3, y: 34}
-        - {x: -22, y: 24}
-        - {x: -29, y: 8}
-        - {x: -29, y: -3}
-        - {x: -19, y: -25}
-        - {x: -10, y: -34}
-        - {x: 19, y: -34}
-        - {x: 30, y: -11}
-        - {x: 30, y: 19}
-        - {x: 16, y: 34}
     - name: duck
       rect:
         serializedVersion: 2
@@ -150,17 +138,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 11, y: 9}
-        - {x: -3, y: 9}
-        - {x: -22, y: 0}
-        - {x: -31, y: -20}
-        - {x: -31, y: -32}
-        - {x: 30, y: -32}
-        - {x: 31, y: -28}
-        - {x: 31, y: -11}
     - name: spelunky_animations_2
       rect:
         serializedVersion: 2
@@ -169,18 +148,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -16, y: 15}
-        - {x: -34, y: 4}
-        - {x: -34, y: -22}
-        - {x: -20, y: -34}
-        - {x: 23, y: -34}
-        - {x: 33, y: -33}
-        - {x: 34, y: -28}
-        - {x: 34, y: 3}
-        - {x: 31, y: 15}
     - name: duck_1
       rect:
         serializedVersion: 2
@@ -189,17 +158,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 1, y: 29}
-        - {x: -22, y: 9}
-        - {x: -22, y: -33}
-        - {x: -16, y: -35}
-        - {x: 26, y: -35}
-        - {x: 40, y: -11}
-        - {x: 40, y: 13}
-        - {x: 24, y: 29}
     - name: duck_2
       rect:
         serializedVersion: 2
@@ -208,21 +168,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 33, y: -17}
-        - {x: 33, y: 2}
-        - {x: 15, y: 12}
-        - {x: -11, y: 12}
-        - {x: -19, y: 0}
-        - {x: -32, y: -27}
-        - {x: -32, y: -32}
-        - {x: -28, y: -34}
-        - {x: 22, y: -34}
-        - {x: 24, y: -32}
-        - {x: 24, y: -29}
-        - {x: 26, y: -24}
     - name: duck_3
       rect:
         serializedVersion: 2
@@ -231,17 +178,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -9, y: 7}
-        - {x: -29, y: -10}
-        - {x: -29, y: -32}
-        - {x: -27, y: -34}
-        - {x: 26, y: -34}
-        - {x: 33, y: -26}
-        - {x: 33, y: -13}
-        - {x: 19, y: 7}
     - name: crawl_1
       rect:
         serializedVersion: 2
@@ -250,17 +188,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -12, y: 6}
-        - {x: -20, y: -3}
-        - {x: -29, y: -26}
-        - {x: -29, y: -34}
-        - {x: 31, y: -34}
-        - {x: 32, y: -33}
-        - {x: 32, y: -6}
-        - {x: 16, y: 6}
     - name: crawl_2
       rect:
         serializedVersion: 2
@@ -269,16 +198,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -10, y: 6}
-        - {x: -29, y: -12}
-        - {x: -29, y: -34}
-        - {x: 30, y: -34}
-        - {x: 32, y: -29}
-        - {x: 32, y: -15}
-        - {x: 20, y: 6}
     - name: crawl_3
       rect:
         serializedVersion: 2
@@ -287,17 +208,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -9, y: 6}
-        - {x: -29, y: -15}
-        - {x: -29, y: -31}
-        - {x: -27, y: -34}
-        - {x: 30, y: -34}
-        - {x: 32, y: -26}
-        - {x: 32, y: -12}
-        - {x: 14, y: 6}
     - name: crawl_4
       rect:
         serializedVersion: 2
@@ -306,18 +218,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -3, y: 6}
-        - {x: -14, y: 4}
-        - {x: -29, y: -23}
-        - {x: -29, y: -32}
-        - {x: -27, y: -34}
-        - {x: 27, y: -34}
-        - {x: 32, y: -28}
-        - {x: 32, y: -15}
-        - {x: 16, y: 6}
     - name: crawl_5
       rect:
         serializedVersion: 2
@@ -326,17 +228,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -9, y: 6}
-        - {x: -29, y: -15}
-        - {x: -29, y: -31}
-        - {x: -27, y: -34}
-        - {x: 28, y: -34}
-        - {x: 35, y: -32}
-        - {x: 35, y: -12}
-        - {x: 23, y: 6}
     - name: crawl_6
       rect:
         serializedVersion: 2
@@ -345,15 +238,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -11, y: 6}
-        - {x: -29, y: -8}
-        - {x: -29, y: -34}
-        - {x: 37, y: -34}
-        - {x: 37, y: -8}
-        - {x: 30, y: 6}
     - name: crawl_7
       rect:
         serializedVersion: 2
@@ -362,15 +248,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -29, y: -34}
-        - {x: 38, y: -34}
-        - {x: 38, y: -16}
-        - {x: 27, y: 6}
-        - {x: -10, y: 6}
-        - {x: -29, y: -12}
     - name: run_1
       rect:
         serializedVersion: 2
@@ -379,16 +258,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -14, y: 35}
-        - {x: -30, y: 11}
-        - {x: -30, y: -16}
-        - {x: -17, y: -35}
-        - {x: 21, y: -35}
-        - {x: 29, y: -27}
-        - {x: 29, y: 35}
     - name: run_2
       rect:
         serializedVersion: 2
@@ -397,16 +268,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -30, y: -4}
-        - {x: -14, y: -32}
-        - {x: -12, y: -36}
-        - {x: 29, y: -36}
-        - {x: 29, y: 34}
-        - {x: -17, y: 34}
-        - {x: -30, y: 12}
     - name: run_3
       rect:
         serializedVersion: 2
@@ -415,17 +278,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -19, y: 34}
-        - {x: -30, y: 14}
-        - {x: -30, y: -7}
-        - {x: -16, y: -35}
-        - {x: 19, y: -35}
-        - {x: 29, y: 8}
-        - {x: 29, y: 16}
-        - {x: 18, y: 34}
     - name: run_4
       rect:
         serializedVersion: 2
@@ -434,18 +288,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 10, y: 33}
-        - {x: -12, y: 33}
-        - {x: -30, y: 14}
-        - {x: -30, y: -8}
-        - {x: -11, y: -35}
-        - {x: 9, y: -35}
-        - {x: 29, y: 2}
-        - {x: 29, y: 13}
-        - {x: 28, y: 15}
     - name: run_5
       rect:
         serializedVersion: 2
@@ -454,17 +298,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -15, y: 36}
-        - {x: -30, y: 28}
-        - {x: -30, y: -30}
-        - {x: -13, y: -36}
-        - {x: 15, y: -36}
-        - {x: 29, y: -6}
-        - {x: 29, y: 25}
-        - {x: 10, y: 36}
     - name: run_6
       rect:
         serializedVersion: 2
@@ -473,19 +308,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -10, y: 35}
-        - {x: -19, y: 34}
-        - {x: -30, y: 10}
-        - {x: -30, y: -2}
-        - {x: -22, y: -33}
-        - {x: -17, y: -35}
-        - {x: 17, y: -35}
-        - {x: 29, y: -5}
-        - {x: 29, y: 24}
-        - {x: 16, y: 35}
     - name: run_7
       rect:
         serializedVersion: 2
@@ -494,18 +318,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -5, y: 35}
-        - {x: -25, y: 27}
-        - {x: -29, y: 17}
-        - {x: -29, y: -12}
-        - {x: -15, y: -35}
-        - {x: 18, y: -35}
-        - {x: 30, y: 6}
-        - {x: 30, y: 17}
-        - {x: 15, y: 35}
     - name: run_8
       rect:
         serializedVersion: 2
@@ -514,18 +328,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 15, y: 34}
-        - {x: -13, y: 34}
-        - {x: -29, y: 13}
-        - {x: -29, y: -18}
-        - {x: -15, y: -36}
-        - {x: 9, y: -36}
-        - {x: 17, y: -29}
-        - {x: 30, y: -1}
-        - {x: 30, y: 16}
     - name: teeter_1
       rect:
         serializedVersion: 2
@@ -534,20 +338,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 22, y: 23}
-        - {x: 8, y: 35}
-        - {x: -14, y: 35}
-        - {x: -34, y: 25}
-        - {x: -36, y: 18}
-        - {x: -36, y: -19}
-        - {x: -29, y: -35}
-        - {x: 15, y: -35}
-        - {x: 17, y: -28}
-        - {x: 19, y: -17}
-        - {x: 22, y: -5}
     - name: teeter_2
       rect:
         serializedVersion: 2
@@ -556,16 +348,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -25, y: 35}
-        - {x: -37, y: 25}
-        - {x: -37, y: -27}
-        - {x: -24, y: -35}
-        - {x: 19, y: -35}
-        - {x: 19, y: 28}
-        - {x: 9, y: 35}
     - name: teeter_3
       rect:
         serializedVersion: 2
@@ -574,18 +358,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 15, y: 35}
-        - {x: -11, y: 35}
-        - {x: -31, y: 26}
-        - {x: -31, y: -8}
-        - {x: -17, y: -35}
-        - {x: 12, y: -35}
-        - {x: 23, y: -32}
-        - {x: 27, y: -7}
-        - {x: 27, y: 21}
     - name: teeter_4
       rect:
         serializedVersion: 2
@@ -594,20 +368,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 11, y: 33}
-        - {x: -6, y: 33}
-        - {x: -17, y: 29}
-        - {x: -32, y: 8}
-        - {x: -32, y: -9}
-        - {x: -18, y: -34}
-        - {x: -14, y: -35}
-        - {x: 13, y: -35}
-        - {x: 26, y: -19}
-        - {x: 28, y: -10}
-        - {x: 28, y: 16}
     - name: teeter_5
       rect:
         serializedVersion: 2
@@ -616,19 +378,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 34, y: 30}
-        - {x: -7, y: 30}
-        - {x: -17, y: 16}
-        - {x: -19, y: 11}
-        - {x: -19, y: -27}
-        - {x: -15, y: -35}
-        - {x: 28, y: -35}
-        - {x: 40, y: -11}
-        - {x: 40, y: 15}
-        - {x: 38, y: 29}
     - name: teeter_6
       rect:
         serializedVersion: 2
@@ -637,17 +388,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -8, y: 26}
-        - {x: -22, y: 3}
-        - {x: -22, y: -35}
-        - {x: 10, y: -35}
-        - {x: 35, y: -29}
-        - {x: 40, y: -22}
-        - {x: 40, y: 25}
-        - {x: 39, y: 26}
     - name: teeter_7
       rect:
         serializedVersion: 2
@@ -656,17 +398,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -7, y: 32}
-        - {x: -21, y: 17}
-        - {x: -21, y: -28}
-        - {x: -12, y: -35}
-        - {x: 7, y: -35}
-        - {x: 40, y: -5}
-        - {x: 40, y: 8}
-        - {x: 34, y: 32}
     - name: teeter_8
       rect:
         serializedVersion: 2
@@ -675,17 +408,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -7, y: 35}
-        - {x: -29, y: 26}
-        - {x: -29, y: -32}
-        - {x: -19, y: -35}
-        - {x: 13, y: -35}
-        - {x: 30, y: -4}
-        - {x: 30, y: 21}
-        - {x: 18, y: 35}
     - name: ledge_hang_1
       rect:
         serializedVersion: 2
@@ -694,18 +418,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -11, y: 35}
-        - {x: -20, y: 29}
-        - {x: -28, y: 15}
-        - {x: -28, y: -22}
-        - {x: -8, y: -40}
-        - {x: 30, y: -40}
-        - {x: 31, y: -37}
-        - {x: 31, y: 23}
-        - {x: 17, y: 35}
     - name: ledge_hang_2
       rect:
         serializedVersion: 2
@@ -714,17 +428,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -12, y: 34}
-        - {x: -28, y: 12}
-        - {x: -28, y: -30}
-        - {x: -18, y: -40}
-        - {x: 18, y: -40}
-        - {x: 31, y: -35}
-        - {x: 31, y: 15}
-        - {x: 9, y: 34}
     - name: ledge_hang_3
       rect:
         serializedVersion: 2
@@ -733,17 +438,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -14, y: 35}
-        - {x: -28, y: 15}
-        - {x: -28, y: -38}
-        - {x: -21, y: -39}
-        - {x: 30, y: -39}
-        - {x: 31, y: -35}
-        - {x: 31, y: 24}
-        - {x: 14, y: 35}
     - name: ledge_hang_4
       rect:
         serializedVersion: 2
@@ -752,16 +448,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -27, y: 36}
-        - {x: -28, y: 35}
-        - {x: -28, y: -33}
-        - {x: 30, y: -33}
-        - {x: 31, y: -30}
-        - {x: 31, y: 24}
-        - {x: 21, y: 36}
     - name: throw_1
       rect:
         serializedVersion: 2
@@ -770,19 +458,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 8, y: 36}
-        - {x: -13, y: 36}
-        - {x: -27, y: 21}
-        - {x: -31, y: 4}
-        - {x: -31, y: -9}
-        - {x: -15, y: -35}
-        - {x: 12, y: -35}
-        - {x: 13, y: -32}
-        - {x: 26, y: 0}
-        - {x: 26, y: 25}
     - name: throw_2
       rect:
         serializedVersion: 2
@@ -791,17 +468,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -17, y: 36}
-        - {x: -29, y: 31}
-        - {x: -29, y: -11}
-        - {x: -26, y: -25}
-        - {x: -14, y: -35}
-        - {x: 25, y: -35}
-        - {x: 29, y: -20}
-        - {x: 29, y: 36}
     - name: throw_3
       rect:
         serializedVersion: 2
@@ -810,18 +478,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 27, y: 33}
-        - {x: 24, y: 34}
-        - {x: -3, y: 34}
-        - {x: -27, y: 17}
-        - {x: -27, y: -34}
-        - {x: 10, y: -34}
-        - {x: 24, y: -25}
-        - {x: 36, y: -4}
-        - {x: 36, y: 13}
     - name: throw_4
       rect:
         serializedVersion: 2
@@ -830,18 +488,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 30, y: 31}
-        - {x: 5, y: 31}
-        - {x: -22, y: 24}
-        - {x: -23, y: 19}
-        - {x: -23, y: -26}
-        - {x: -20, y: -34}
-        - {x: 40, y: -34}
-        - {x: 40, y: 11}
-        - {x: 35, y: 27}
     - name: throw_5
       rect:
         serializedVersion: 2
@@ -850,18 +498,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 15, y: 36}
-        - {x: -10, y: 36}
-        - {x: -31, y: 27}
-        - {x: -31, y: -17}
-        - {x: -18, y: -35}
-        - {x: 13, y: -35}
-        - {x: 17, y: -34}
-        - {x: 26, y: -26}
-        - {x: 26, y: 23}
     - name: push_1
       rect:
         serializedVersion: 2
@@ -870,18 +508,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -7, y: 32}
-        - {x: -15, y: 31}
-        - {x: -31, y: 19}
-        - {x: -31, y: -25}
-        - {x: -28, y: -37}
-        - {x: 15, y: -37}
-        - {x: 33, y: -8}
-        - {x: 33, y: 23}
-        - {x: 29, y: 32}
     - name: push_2
       rect:
         serializedVersion: 2
@@ -890,21 +518,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 30, y: 31}
-        - {x: 22, y: 34}
-        - {x: -2, y: 34}
-        - {x: -13, y: 28}
-        - {x: -31, y: -1}
-        - {x: -31, y: -15}
-        - {x: -17, y: -35}
-        - {x: -11, y: -36}
-        - {x: 9, y: -36}
-        - {x: 23, y: -19}
-        - {x: 33, y: -3}
-        - {x: 33, y: 12}
     - name: push_3
       rect:
         serializedVersion: 2
@@ -913,21 +528,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 29, y: 31}
-        - {x: 19, y: 35}
-        - {x: -7, y: 35}
-        - {x: -16, y: 32}
-        - {x: -31, y: 0}
-        - {x: -31, y: -22}
-        - {x: -17, y: -35}
-        - {x: -13, y: -36}
-        - {x: 6, y: -36}
-        - {x: 22, y: -18}
-        - {x: 33, y: -1}
-        - {x: 33, y: 7}
     - name: push_4
       rect:
         serializedVersion: 2
@@ -936,19 +538,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -3, y: 33}
-        - {x: -23, y: 14}
-        - {x: -31, y: -5}
-        - {x: -31, y: -24}
-        - {x: -24, y: -36}
-        - {x: 12, y: -36}
-        - {x: 20, y: -34}
-        - {x: 33, y: -13}
-        - {x: 33, y: 21}
-        - {x: 24, y: 33}
     - name: push_5
       rect:
         serializedVersion: 2
@@ -957,19 +548,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 19, y: 35}
-        - {x: 4, y: 35}
-        - {x: -13, y: 30}
-        - {x: -31, y: 4}
-        - {x: -31, y: -19}
-        - {x: -18, y: -36}
-        - {x: 9, y: -36}
-        - {x: 33, y: -5}
-        - {x: 33, y: 17}
-        - {x: 31, y: 29}
     - name: push_6
       rect:
         serializedVersion: 2
@@ -978,17 +558,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -31, y: -35}
-        - {x: -30, y: -36}
-        - {x: 13, y: -36}
-        - {x: 33, y: -30}
-        - {x: 33, y: 34}
-        - {x: 31, y: 35}
-        - {x: -8, y: 35}
-        - {x: -31, y: 10}
     - name: spelunky_animations_44
       rect:
         serializedVersion: 2
@@ -997,19 +568,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -5, y: 34}
-        - {x: -26, y: 20}
-        - {x: -27, y: 11}
-        - {x: -27, y: -19}
-        - {x: -13, y: -34}
-        - {x: 10, y: -34}
-        - {x: 14, y: -33}
-        - {x: 28, y: -27}
-        - {x: 28, y: 13}
-        - {x: 18, y: 34}
     - name: spelunky_animations_45
       rect:
         serializedVersion: 2
@@ -1018,15 +578,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -27, y: 34}
-        - {x: -27, y: -20}
-        - {x: -25, y: -28}
-        - {x: -14, y: -35}
-        - {x: 27, y: -35}
-        - {x: 27, y: 34}
     - name: spelunky_animations_46
       rect:
         serializedVersion: 2
@@ -1035,18 +588,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 14, y: 35}
-        - {x: -5, y: 35}
-        - {x: -24, y: 20}
-        - {x: -28, y: -1}
-        - {x: -28, y: -8}
-        - {x: -9, y: -35}
-        - {x: 4, y: -35}
-        - {x: 27, y: -22}
-        - {x: 27, y: 15}
     - name: spelunky_animations_47
       rect:
         serializedVersion: 2
@@ -1055,20 +598,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 10, y: 34}
-        - {x: -10, y: 34}
-        - {x: -22, y: 32}
-        - {x: -27, y: 23}
-        - {x: -27, y: -17}
-        - {x: -17, y: -34}
-        - {x: 13, y: -34}
-        - {x: 14, y: -33}
-        - {x: 28, y: -18}
-        - {x: 28, y: -1}
-        - {x: 26, y: 18}
     - name: spelunky_animations_48
       rect:
         serializedVersion: 2
@@ -1077,19 +608,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -14, y: 34}
-        - {x: -27, y: 17}
-        - {x: -27, y: -9}
-        - {x: -26, y: -19}
-        - {x: -19, y: -28}
-        - {x: 2, y: -35}
-        - {x: 12, y: -35}
-        - {x: 27, y: -18}
-        - {x: 27, y: 18}
-        - {x: 10, y: 34}
     - name: spelunky_animations_49
       rect:
         serializedVersion: 2
@@ -1098,17 +618,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -14, y: 35}
-        - {x: -27, y: 21}
-        - {x: -27, y: -25}
-        - {x: -15, y: -35}
-        - {x: 13, y: -35}
-        - {x: 28, y: -23}
-        - {x: 28, y: 20}
-        - {x: 9, y: 35}
     - name: rope_climb_01
       rect:
         serializedVersion: 2
@@ -1117,20 +628,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 14, y: 38}
-        - {x: -15, y: 38}
-        - {x: -27, y: 19}
-        - {x: -27, y: -17}
-        - {x: -23, y: -24}
-        - {x: -15, y: -29}
-        - {x: 10, y: -29}
-        - {x: 25, y: -25}
-        - {x: 27, y: -17}
-        - {x: 27, y: 18}
-        - {x: 21, y: 33}
     - name: rope_climb_02
       rect:
         serializedVersion: 2
@@ -1139,18 +638,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -12, y: 37}
-        - {x: -27, y: 19}
-        - {x: -27, y: -1}
-        - {x: -25, y: -27}
-        - {x: -16, y: -32}
-        - {x: 21, y: -32}
-        - {x: 33, y: -20}
-        - {x: 33, y: 19}
-        - {x: 10, y: 37}
     - name: rope_climb_03
       rect:
         serializedVersion: 2
@@ -1159,18 +648,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 7, y: 38}
-        - {x: -10, y: 38}
-        - {x: -27, y: 28}
-        - {x: -27, y: -31}
-        - {x: -12, y: -35}
-        - {x: 20, y: -35}
-        - {x: 34, y: -23}
-        - {x: 34, y: 11}
-        - {x: 30, y: 29}
     - name: rope_climb_04
       rect:
         serializedVersion: 2
@@ -1179,19 +658,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 6, y: 39}
-        - {x: -7, y: 39}
-        - {x: -25, y: 24}
-        - {x: -27, y: 18}
-        - {x: -27, y: -8}
-        - {x: -8, y: -36}
-        - {x: 13, y: -36}
-        - {x: 30, y: -16}
-        - {x: 30, y: 14}
-        - {x: 21, y: 33}
     - name: rope_climb_05
       rect:
         serializedVersion: 2
@@ -1200,18 +668,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 9, y: 38}
-        - {x: -15, y: 38}
-        - {x: -27, y: 28}
-        - {x: -27, y: -24}
-        - {x: -21, y: -30}
-        - {x: 16, y: -30}
-        - {x: 22, y: -25}
-        - {x: 27, y: -11}
-        - {x: 27, y: 26}
     - name: rope_climb_06
       rect:
         serializedVersion: 2
@@ -1220,19 +678,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 27, y: 14}
-        - {x: 14, y: 38}
-        - {x: -13, y: 38}
-        - {x: -27, y: 29}
-        - {x: -27, y: -19}
-        - {x: -24, y: -29}
-        - {x: 8, y: -29}
-        - {x: 17, y: -27}
-        - {x: 26, y: -19}
-        - {x: 27, y: -15}
     - name: rope_climb_07
       rect:
         serializedVersion: 2
@@ -1241,17 +688,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -5, y: 37}
-        - {x: -29, y: 23}
-        - {x: -33, y: 9}
-        - {x: -33, y: -24}
-        - {x: -24, y: -32}
-        - {x: 27, y: -32}
-        - {x: 27, y: 33}
-        - {x: 17, y: 37}
     - name: rope_climb_08
       rect:
         serializedVersion: 2
@@ -1260,17 +698,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -9, y: 38}
-        - {x: -34, y: 11}
-        - {x: -34, y: -15}
-        - {x: -23, y: -35}
-        - {x: 12, y: -35}
-        - {x: 27, y: -28}
-        - {x: 27, y: 25}
-        - {x: 7, y: 38}
     - name: rope_climb_09
       rect:
         serializedVersion: 2
@@ -1279,17 +708,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -12, y: 39}
-        - {x: -30, y: 26}
-        - {x: -30, y: -17}
-        - {x: -15, y: -36}
-        - {x: 9, y: -36}
-        - {x: 27, y: -14}
-        - {x: 27, y: 22}
-        - {x: 13, y: 39}
     - name: rope_climb_10
       rect:
         serializedVersion: 2
@@ -1298,16 +718,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -9, y: 38}
-        - {x: -27, y: 27}
-        - {x: -27, y: -30}
-        - {x: 26, y: -30}
-        - {x: 27, y: -26}
-        - {x: 27, y: 30}
-        - {x: 17, y: 38}
     - name: look_up_1
       rect:
         serializedVersion: 2
@@ -1316,18 +728,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -10, y: 35}
-        - {x: -28, y: 25}
-        - {x: -28, y: -13}
-        - {x: -21, y: -27}
-        - {x: -7, y: -34}
-        - {x: 17, y: -34}
-        - {x: 29, y: -2}
-        - {x: 29, y: 27}
-        - {x: 22, y: 35}
     - name: look_up_2
       rect:
         serializedVersion: 2
@@ -1336,17 +738,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -22, y: 36}
-        - {x: -26, y: 21}
-        - {x: -26, y: -23}
-        - {x: -13, y: -34}
-        - {x: 22, y: -34}
-        - {x: 25, y: -30}
-        - {x: 25, y: 26}
-        - {x: 18, y: 36}
     - name: look_up_3
       rect:
         serializedVersion: 2
@@ -1355,16 +748,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -26, y: 33}
-        - {x: -30, y: 22}
-        - {x: -30, y: -23}
-        - {x: -26, y: -31}
-        - {x: -15, y: -34}
-        - {x: 22, y: -34}
-        - {x: 22, y: 33}
     - name: look_up_4
       rect:
         serializedVersion: 2
@@ -1373,16 +758,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -32, y: 32}
-        - {x: -32, y: -10}
-        - {x: -25, y: -32}
-        - {x: -14, y: -34}
-        - {x: 13, y: -34}
-        - {x: 18, y: -31}
-        - {x: 18, y: 32}
     - name: jump_1
       rect:
         serializedVersion: 2
@@ -1391,17 +768,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -5, y: 34}
-        - {x: -28, y: 23}
-        - {x: -28, y: -8}
-        - {x: -12, y: -36}
-        - {x: 13, y: -36}
-        - {x: 31, y: -1}
-        - {x: 31, y: 23}
-        - {x: 20, y: 34}
     - name: jump_2
       rect:
         serializedVersion: 2
@@ -1410,18 +778,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -21, y: 35}
-        - {x: -30, y: 33}
-        - {x: -30, y: -32}
-        - {x: -11, y: -39}
-        - {x: 10, y: -39}
-        - {x: 20, y: -37}
-        - {x: 30, y: 3}
-        - {x: 30, y: 16}
-        - {x: 14, y: 35}
     - name: jump_3
       rect:
         serializedVersion: 2
@@ -1430,18 +788,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 16, y: 34}
-        - {x: -24, y: 34}
-        - {x: -28, y: 13}
-        - {x: -28, y: -36}
-        - {x: -24, y: -37}
-        - {x: 19, y: -37}
-        - {x: 26, y: -26}
-        - {x: 32, y: 2}
-        - {x: 32, y: 16}
     - name: jump_4
       rect:
         serializedVersion: 2
@@ -1450,19 +798,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 11, y: 34}
-        - {x: -15, y: 34}
-        - {x: -28, y: 27}
-        - {x: -28, y: -33}
-        - {x: -12, y: -38}
-        - {x: 6, y: -38}
-        - {x: 20, y: -34}
-        - {x: 29, y: -17}
-        - {x: 32, y: -6}
-        - {x: 32, y: 19}
     - name: fall_1
       rect:
         serializedVersion: 2
@@ -1471,16 +808,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -7, y: 39}
-        - {x: -30, y: 31}
-        - {x: -30, y: -18}
-        - {x: -9, y: -37}
-        - {x: 28, y: -37}
-        - {x: 28, y: 32}
-        - {x: 16, y: 39}
     - name: fall_2
       rect:
         serializedVersion: 2
@@ -1489,17 +818,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -7, y: 39}
-        - {x: -28, y: 23}
-        - {x: -28, y: -11}
-        - {x: -10, y: -36}
-        - {x: 25, y: -36}
-        - {x: 28, y: -35}
-        - {x: 28, y: 30}
-        - {x: 9, y: 39}
     - name: fall_3
       rect:
         serializedVersion: 2
@@ -1508,18 +828,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -6, y: 39}
-        - {x: -25, y: 24}
-        - {x: -28, y: 19}
-        - {x: -28, y: -13}
-        - {x: -12, y: -39}
-        - {x: 24, y: -39}
-        - {x: 29, y: -20}
-        - {x: 29, y: 24}
-        - {x: 7, y: 39}
     - name: fall_4
       rect:
         serializedVersion: 2
@@ -1528,18 +838,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -12, y: 39}
-        - {x: -28, y: 12}
-        - {x: -28, y: -10}
-        - {x: -2, y: -38}
-        - {x: 14, y: -38}
-        - {x: 19, y: -35}
-        - {x: 29, y: -9}
-        - {x: 29, y: 24}
-        - {x: 9, y: 39}
     - name: trigger-green
       rect:
         serializedVersion: 2
@@ -1548,14 +848,8 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -40, y: 40}
-        - {x: -40, y: -40}
-        - {x: 40, y: -40}
-        - {x: 40, y: 40}
-    outline: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
