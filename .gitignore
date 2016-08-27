@@ -6,6 +6,7 @@ Obj/
 UnityGenerated/
 Library/
 Standard Assets/
+YounGen Tech/
 # ================ #
 # 3rd Party Assets #
 # ================ #
@@ -42,3 +43,4 @@ ExportedObj/
 Icon?
 ehthumbs.db
 Thumbs.db
+YounGen Tech.meta
