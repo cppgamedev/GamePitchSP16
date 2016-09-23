@@ -34,6 +34,8 @@ public class PlayerInput : MonoBehaviour
     private Inventory inventory;
     private PlayerStats playerStats;
 
+    public GameObject sword;
+
     void Awake()
 	{
 		_animator = GetComponent<Animator>();
@@ -63,8 +65,7 @@ public class PlayerInput : MonoBehaviour
 
 	void onTriggerEnterEvent( Collider2D col )
 	{
-        
-        if(col.gameObject.tag == "Item")
+        if (col.gameObject.tag == "Item")
         {
             //Gets the item id from the item world object returns true if add to inventory
             if(inventory.addItem(col.gameObject.GetComponent<ItemPickup>().getItemID()))
@@ -76,13 +77,16 @@ public class PlayerInput : MonoBehaviour
         else if (col.gameObject.tag == "Enemy")
         {
             Damage enemy = col.gameObject.GetComponent<Damage>();
-            playerStats.removeHealth(enemy.getDamage());
-            int dirc = col.gameObject.transform.position.x -
-                this.gameObject.transform.position.x > 0 ? -1 : 1;
+            if(enemy != null)
+            {
+                playerStats.removeHealth(enemy.getDamage());
+                int dirc = col.gameObject.transform.position.x -
+                    this.gameObject.transform.position.x > 0 ? -1 : 1;
             
-            knockback = new Vector3( dirc * enemy.getKnockBackX(), enemy.getKnockBackY(), 0);
-            knockbackdur = enemy.getPower();
-            enemy.getDestructable();
+                knockback = new Vector3( dirc * enemy.getKnockBackX(), enemy.getKnockBackY(), 0);
+                knockbackdur = enemy.getPower();
+                enemy.getDestructable();
+            }
         }
         else
         {
@@ -110,13 +114,12 @@ public class PlayerInput : MonoBehaviour
         } 
 		else if (_controller.isWalled) //Reset for double jump
 		{
-			jumpCount = 1;
+			jumpCount = 2;
 		}
 
         if (knockbackdur > 0)
         {
             knockbackdur -= 1 * Time.deltaTime;
-            Debug.Log("KnockBack Time: " + knockbackdur);
             _velocity = knockback;
         }
         else
@@ -198,6 +201,14 @@ public class PlayerInput : MonoBehaviour
             {
                 isCroched = false;
             }
+        }
+
+        if(Input.GetButton("Attack"))
+        {
+            sword.SetActive(true);
+        }else
+        {
+            sword.SetActive(false);
         }
          // apply gravity before moving
             _velocity.y += gravity * Time.deltaTime;

@@ -49,7 +49,7 @@ public class chargingEnemy : MonoBehaviour {
     }
 
     void OnTriggerStay2D(Collider2D other){
-        if(other.tag == "Player"){
+        if(enemyAnimator != null && other.tag == "Player"){
             if(startChargeTime < Time.time)
             { 
 				if (!facingRight) { 
@@ -64,7 +64,7 @@ public class chargingEnemy : MonoBehaviour {
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if(other.tag == "Player")
+        if(enemyAnimator != null && other.tag == "Player")
         {
             canFlip = true;
             charging = false;
@@ -74,7 +74,7 @@ public class chargingEnemy : MonoBehaviour {
     }
 
     void flipFacing(){
-        if (!canFlip) return;
+        if (!canFlip || enemyGraphic == null) return;
         float facingX = enemyGraphic.transform.localScale.x;
         facingX *= -1f;
         enemyGraphic.transform.localScale = new Vector3(facingX, enemyGraphic.transform.localScale.y, enemyGraphic.transform.localScale.z);
