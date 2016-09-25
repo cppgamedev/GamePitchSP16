@@ -4,15 +4,17 @@ using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour {
 
+    public static PlayerStats Instance; 
     public float health;
     public const float maxHealth = 3;
 
 	void Awake ()
     {
+        Instance = this;
         health = maxHealth;
 	}
 	
-    public float getHelath()
+    public float getHealth()
     {
         return health;
     }
